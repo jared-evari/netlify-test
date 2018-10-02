@@ -10,7 +10,7 @@
   publish = "/output"
   command = "echo 'Hello world!"
 
-[context.webapp]
+[context.production]
   base    = "src/webapp"
   publish = "build"
   command = "npm run build"
