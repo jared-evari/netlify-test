@@ -1,9 +1,12 @@
 const fs = require('fs')
+const path = require('path')
 
-if (!fs.existsSync('./build')) {
-  fs.mkdirSync('./build')
+const buildDir = path.resolve(__dirname, './build')
+
+if (!fs.existsSync(buildDir)) {
+  fs.mkdirSync(buildDir)
 }
 
-fs.writeFileSync('./build/index.html', 'Hello world!', { flag: 'a+' })
+fs.writeFileSync(path.join(buildDir, './index.html'), 'Hello world!', { flag: 'a+' })
 
-console.log('Job done!')
+console.log('Job done!', buildDir)
