@@ -12,7 +12,7 @@
 
 [context.production]
   base    = "src/webapp"
-  publish = "build"
+  publish = "src/webapp/build"
   command = "npm run build"
 
 # The following redirect is intended for use with most SPA's that handles routing internally.
